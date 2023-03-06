@@ -16,13 +16,10 @@ public class LoginController {
     @Autowired
     private LoginService service;
 
+
     @PostMapping("/login")
-    public ResponseEntity<?> login(@Valid @RequestParam() String userName, @RequestParam() String password) {
-        LoginRequest request = new LoginRequest();
-        request.setUserName(userName);
-        request.setPassword(password);
+    public ResponseEntity<?> login(@Valid @RequestBody LoginRequest request) {
         UserDto userDto = service.login(request);
         return ResponseEntity.ok(userDto);
     }
-
 }

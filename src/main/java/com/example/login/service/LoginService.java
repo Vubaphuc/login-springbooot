@@ -24,7 +24,7 @@ public class LoginService {
             User user = userOptional.get();
             return UserMapper.toUserDto(user);
         }
-        throw new BadRequestException("UserName hoặc passwork không đúng");
+        throw new BadRequestException("Username hoặc password chưa chính xác");
     }
 
 

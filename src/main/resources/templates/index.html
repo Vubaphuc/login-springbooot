@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" href="../static/css/main.css">
     <title>Document</title>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-<div class="login-box">
-    <h2>Login</h2>
-    <form action="#" th:action="@{/login}" method="post" class="login">
-        <div class="user-box">
-            <input type="text" name="userName" required="">
-            <label>UserName</label>
-        </div>
-        <div class="user-box">
-            <input type="password" name="password" required="">
-            <label>Password</label>
-        </div>
-        <button type="submit" class="neon-button">Submit</button>
-    </form>
-</div>
+    <div class="login-box" id="login-box">
+        <h2>Login</h2>
+        <form  class="login" id="login">
+            <div class="user-box">
+                <input type="text" name="userName" required="" id="userName">
+                <label for="userName">UserName</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" required="" id="password">
+                <label for="password">Password</label>
+            </div>
+            <button type="submit" class="neon-button">Submit</button>
+        </form>
+    </div>
+    <script src="../static/js/main.js"></script>
 </body>
 </html>
